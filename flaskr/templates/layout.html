@@ -1,0 +1,59 @@
+<!doctype html>
+<!-- Basic Page Needs
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<meta charset="utf-8">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Mobile Specific Metas
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- FONT
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+<!-- CSS
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<link rel="stylesheet" href="static/assets/css/lib/normalize.css">
+<link rel="stylesheet" href="static/assets/css/lib/skeleton.css">
+
+<!-- Favicon
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<link rel="icon" href="static/img/flame_icon.ico">
+<title>{% block title %}{% endblock %} | Benjamin Hanna</title>
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="one-half column" style="margin-top: 5%">
+                {% block header %}{% endblock %}
+
+            </div>
+            <div class="one-half column" style="margin-top: 5%">
+                <a href="{{ url_for('index') }}">Home</a></br>
+                <a href="{{ url_for('portfolio') }}">A Few Accomplishments</a></br>
+                <a href="{{ url_for('contact') }}"> Contact</a></br>
+            </div>
+        </div>
+    </div>
+    
+</header>
+<body>
+    {% block content %}
+    {% endblock %}
+</body>
+<footer>
+    {% block footer %}
+    <div class="container">
+        <div class="row">
+            <div class="one-half column" style="margin-top: 5%; margin-bottom: 5%"><p>Benjamin Hanna 2020</p></div>
+            <div class="one-half column" style="margin-top: 5%; margin-bottom: 5%">
+                <a href="{{ url_for('credits') }}">Credits</a>
+                <a href="https://www.linkedin.com/in/benjamin-hanna-59253767/">LinkedIn</a>
+                <a href="https://github.com/Behnanan">Github</span></a>
+                <a href="static/images/bh-resume.pdf" download="bh-resume.pdf">Resume</a>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+</footer>

@@ -1,0 +1,23 @@
+<!doctype html>
+{% extends "layout.html" %}
+<title>{% block title %}Welcome{% endblock %}| Benjamin Hanna</title>
+<header>
+  {% block header%}
+  <h4>Benjamin Hanna</a></h4>
+  <p>Philosophy and computer science<br />
+      Community-taught object-oriented programming</br> 
+      ...also pizza.</p>
+  {% endblock %}
+</header>
+<body>
+  {% block content %}
+  <div class="container">
+    <div class="row">
+        <div class="one-half column" style="margin-top: 10%">
+          <img src="static/img/banner.jpg" alt="pizza" width="700" height="400">
+        </div>
+      </div>
+  </div>
+  {% endblock %}
+</body>
+

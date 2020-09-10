@@ -1,0 +1,39 @@
+<!doctype html>
+{% extends "layout.html" %}
+<title>{% block title %}Portfolio{% endblock %}| Benjamin Hanna</title>
+<header>
+    {% block header%}
+    <h4>Things I've Built</a></h4>
+    <p>Including a game without players<br />
+        and a Sales Operations time saver</br> 
+        ...also pizza.</p>
+    {% endblock %}
+</header>
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="one-half column" style="margin-top: 10%">
+          <img src="static/img/banner.jpg" alt="pizza" width="700" height="400">
+        </div>
+      </div>
+  </div>
+    <div class="container">
+        <div class="row">
+            <div class="two-thirds column" style="margin-top: 10%">
+                <h4>Game of Life</h4>
+                <p>A zero player game in automatic cell production and destruction written in pure Javascript. Each game of life evolves as determined by its initial state.</p>
+                <a href="{{ url_for('game_of_life') }}" class="image"><img src="static/img/game-of-life.png" alt="game-of-life" /></a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="two-thirds column" style="margin-top: 5%">
+                <h4>net_quest</h4>
+                <p>A custom email generator that generates Jinja templates from a .csv source and returns a .text file using Python3, Jinja2, python-docx, XlsxWriter.</p>
+                <a href="{{ url_for('net_quest') }}" class="image"><img src="static/img/net_quest.png" alt="net_quest" /></a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

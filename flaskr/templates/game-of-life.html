@@ -1,0 +1,36 @@
+<!doctype html>
+{% extends "layout.html" %}
+<title>{% block title %}Conway's Game Of Life{% endblock %}| Benjamin Hanna</title>
+<header>
+    {% block header%}
+    <img src="static/img/game-of-life-icon.png" alt="pizza" width="50" height="50">
+    <p>A zero player game in automatic cell production and destruction written in pure Javascript. Each game of life evolves as determined by its initial state.</p>
+    {% endblock %}
+</header>
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="column" style="margin-top: 5%; margin-bottom: 1%">
+            <canvas id="canvas" width="800" height="450"></canvas> 
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="column" style="margin-top: 1%; margin-bottom: 5%">
+            <input id="next" type="button" class="button" value=">" onclick="next();" />
+            <input id="doWork" type="button" class="button" value="start" onclick="doWork();" />
+            <input id="stopWork" type="button" class="button" value="stop" onclick="stopWork();" />
+            <input id="clearWork" type="button" class="button" value="clear" onclick="clearWork();" />
+            <input id="gosperGun" type="button" class="button" value="gosper gun" onclick="gosperGun();" />
+            <input id="pulsar" type="button" class="button" value="pulsar" onclick="pulsar();" /> 
+        </div>
+    </div>
+</div>
+<div>
+    <script type="text/javascript" src="static/assets/js/game-of-life/cell.js"></script>
+    <script type="text/javascript" src="static/assets/js/game-of-life/gosper-gun.js"></script>
+    <script type="text/javascript" src="static/assets/js/game-of-life/pulsar.js"></script>
+    <script type="text/javascript" src="static/assets/js/game-of-life/game-of-life.js"></script>
+</div>
+{% endblock %}
